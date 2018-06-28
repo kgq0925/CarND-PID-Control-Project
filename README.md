@@ -59,6 +59,14 @@ More information is only accessible by people who are already enrolled in Term 2
 of CarND. If you are enrolled, see [the project page](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/f1820894-8322-4bb3-81aa-b26b3c6dcbaf/lessons/e8235395-22dd-4b87-88e0-d108c5e5bbf4/concepts/6a4d8d42-6a04-4aa6-b284-1697c0fd6562)
 for instructions and the project rubric.
 
+### Components of PID
+- "P" means that the car will steer in proportion to CTE. If "P" goes for a high value, the car will oscillate a ton.
+- "I" means that integral sums up all CTEs up to that point. It will make the car turn back to the middle and prevent the car from driving on one side. If "I" goes for a high value, the car tends to oscillate quickly.
+- "D" means derivate that is the change in CTE from one point to the next. If the derivative is quickly changing, the car will correct itself faster. It also leads to a more smoother curve.
+
+### Finding Parameters
+I used Twiddle to try out different parameters by running it several times. Finally I chose P:0.33 I:0.0005 D:3.0. 
+
 ## Hints!
 
 * You don't have to follow this directory structure, but if you do, your work
