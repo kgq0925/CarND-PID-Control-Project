@@ -3,6 +3,18 @@
 
 class PID {
 public:
+  int step;
+  int min_step;
+  double best_error;
+  double squared_error;
+  double dKp;
+  double dKi;
+  double dKd;
+  double min_tolerance;
+  double max_tolerance;
+  int twiddle_state;  //-1 decrease 0 start 1 increase
+  int twiddle_param;  // 0 p 1 i 2 d
+
   /*
   * Errors
   */
@@ -41,6 +53,8 @@ public:
   * Calculate the total PID error.
   */
   double TotalError();
+
+  void Twiddle();
 };
 
 #endif /* PID_H */
