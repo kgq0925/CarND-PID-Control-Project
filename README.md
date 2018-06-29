@@ -64,8 +64,8 @@ for instructions and the project rubric.
 - "I" means that integral sums up all CTEs up to that point. It will make the car turn back to the middle and prevent the car from driving on one side. If "I" goes for a high value, the car tends to oscillate quickly.
 - "D" means derivate that is the change in CTE from one point to the next. If the derivative is quickly changing, the car will correct itself faster. It also leads to a more smoother curve.
 
-### Finding Parameters
-I used Twiddle to try out different parameters by running it several times. Finally I chose P:0.33 I:0.0005 D:3.0. 
+### How to  Find Parameters
+I used Twiddle to try out different parameters by running it several times. Print out the PID parameter and the error. Finally I chose P:0.33 I:0.0005 D:3.0, and the error is close to zero. 
 
 ## Hints!
 
